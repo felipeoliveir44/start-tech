@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            << COMEX>>
+        </h1>
+        <hr>
+    </header>
+
+    <main>
+        <p><strong> .:: Lista de clientes ::. </strong></p>
+        <hr>
+
+        
+
+    </main>
+
+    <script>
+        var numeroClientes = 0;
+        var anoAtual = 2023;
+        var idadesAcumuladas = 0;
+
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<hr>");
+        }
+
+        function registrarClientes(nome, mesNascimento, anoNascimento) {
+            numeroClientes += 1;
+            document.write(`Código ${numeroClientes} <br>`);
+            document.write(
+                `Nome: ${nome} <br> Mês de nascimento: ${mesNascimento} <br> Ano de nascimento: ${anoNascimento} <br>`
+                );
+            idadesAcumuladas += formatarIdade(anoNascimento);
+            pulaLinha();
+
+        }
+
+        function formatarIdade(anoNascimento) {
+            let idade;
+
+            idade = anoAtual - anoNascimento;
+            document.write(`Sua idade é: ${idade}`);
+            return idade;
+        }
+
+        function somaDasIdades() {
+            document.write(`O resultado das idades acumuladas são: ${idadesAcumuladas} <br>`);
+        }
+
+        function mediaDasIdades() {
+            let resultado;
+
+            resultado = Math.round(idadesAcumuladas / 3);
+            document.write(`A  média das idades é: ${resultado}`);
+        }
+        registrarClientes("Luiz", "Novembro", 2003);
+        registrarClientes("Fulano", "Julho", 1950);
+        registrarClientes("Sicrano", "Janeiro", 1950);
+
+        document.write("<h2> Estatísticas </h2>");
+        somaDasIdades();
+        mediaDasIdades();
+        pulaLinha();
+        document.write("<footer> <p><strong> .:: Alura LEVEL UP ::. </strong></p></footer>")
+    </script>
+</body>
+
+</html>
