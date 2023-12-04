@@ -25,8 +25,9 @@
 
     <script>
         var numeroClientes = 0;
-        var anoAtual = 2023;
         var idadesAcumuladas = 0;
+        var anoAtual = new Date();
+        
 
         function pulaLinha() {
             document.write("<br>");
@@ -47,7 +48,7 @@
         function formatarIdade(anoNascimento) {
             let idade;
 
-            idade = anoAtual - anoNascimento;
+            idade = anoAtual.getFullYear() - anoNascimento;
             document.write(`Sua idade é: ${idade}`);
             return idade;
         }
