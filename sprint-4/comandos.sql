@@ -33,3 +33,15 @@ update tbpedido set categoria = 'INFORMÁTICA' where categoria = 'INFO';
 /* Ex 4 */
 
 select * from tbpedido;
+
+/* Ex 5 */
+
+select  * from tbpedido where categoria = 'CELULARES';
+
+/* Ex 6 */
+
+SELECT * FROM tbpedido WHERE preco >= 3000 AND preco <= 10000;
+
+/* Ex 7 */
+
+delete from tbpedido where cliente = 'BIA' && quantidade = 1;
