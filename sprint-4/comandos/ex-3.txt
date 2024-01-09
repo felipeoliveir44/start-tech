@@ -1,0 +1,1 @@
+update tbpedido set categoria = 'INFORMÁTICA' where categoria = 'INFO';
